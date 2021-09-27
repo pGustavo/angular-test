@@ -22,7 +22,7 @@ export class LoginPageComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router) {}
 
   state = {
-    logged: true ,
+    logged: true,
   };
 
   loginForm = this.fb.group({
