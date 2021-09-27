@@ -6,20 +6,21 @@
 }
 .list {
   display: flex;
- 
 }
 .task-main {
   display: flex;
   justify-content: space-around;
+  flex-flow: column;
   margin: 60px 0px;
 }
 .input_group {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  margin: 0 0 40px 40px;
   h3 {
     margin: 35px 0 4px 12px;
   }
-  input{
+  input {
     border-radius: 90px;
     border: 1px solid;
     height: 20px;
@@ -46,4 +47,10 @@
     display: flex;
     align-items: center;
   }
+}
+.group {
+  margin-right: 20px;
+}
+.a {
+  border: 1px solid red;
 }

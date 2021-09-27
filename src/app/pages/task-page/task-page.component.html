@@ -1,36 +1,45 @@
 <div class="task-main">
   <div class="input_group">
-    <h3>Add New Task</h3>
-    <div class="add-contorl">
-      <input type="text" placeholder="new taks" #task />
-      <button (click)="addTask(task.value)">Add</button>
+    <div class="group">
+      <h3>Add New Task</h3>
+      <div class="add-contorl">
+        <input type="text" placeholder="new taks" #task />
+        <button (click)="addTask(task.value)">Add</button>
+      </div>
     </div>
-
-    <h3>Filter TODO by Name</h3>
-    <input
-      type="text"
-      placeholder="task name"
-      (input)="filterby('name', filter.value)"
-      #filter
-    />
-    <h3>Filter TODO by ID</h3>
-    <input
-      type="text"
-      placeholder="task name"
-      (input)="filterby('id', filterID.value)"
-      #filterID
-    />
-    <h3>Order</h3>
-    <button (click)="sortArr(this.fTasks)">Sort TODO</button>
-    <button (click)="sortArr(this.doneT)">Sort DONE</button>
-    <h3>Give me a task with number</h3>
-    <input type="text" placeholder="task id" [(ngModel)]="numberID" />
-    <button (click)="findTask()">FIND!</button>
-    <p *ngIf="taskIDFound">
-      {{ taskIDFound.name }}
-      {{ taskIDFound.done ? 'is done' : 'is not done' }}
-    </p>
-    <p *ngIf="!taskIDFound">No TASK FOUND</p>
+    <div class="group">
+      <h3>Filter TODO by Name</h3>
+      <input
+        type="text"
+        placeholder="task name"
+        (input)="filterby('name', filter.value)"
+        #filter
+      />
+    </div>
+    <div class="group">
+      <h3>Filter TODO by ID</h3>
+      <input
+        type="text"
+        placeholder="task name"
+        (input)="filterby('id', filterID.value)"
+        #filterID
+      />
+    </div>
+    <div class="group">
+      <h3>Order</h3>
+      <button (click)="sortArr(this.fTasks)">Sort TODO</button>
+      <button (click)="sortArr(this.doneT)">Sort DONE</button>
+    </div>
+    <div class="group">
+      <h3>Give me a task with number</h3>
+      <input type="text" placeholder="task id" [(ngModel)]="numberID" />
+      <button (click)="findTask()">FIND!</button>
+      <p *ngIf="taskIDFound">
+        {{ taskIDFound.name }}
+        {{ taskIDFound.done ? 'is done' : 'is not done' }}
+      </p>
+      <p *ngIf="!taskIDFound">No TASK FOUND</p>
+    </div>
   </div>
   <div class="list">
     <table-component
