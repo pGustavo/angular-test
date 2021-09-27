@@ -1,0 +1,37 @@
+<div class="welcome">
+  <h1>WELCOME</h1>
+</div>
+
+<form [formGroup]="loginForm">
+  <div class="input_group">
+    <div class="input">
+      <label for="username">Username:</label>
+      <input type="text" formControlName="username" />
+      <p
+        class="wrong"
+        *ngIf="
+          (this.loginForm.get('username').value === '' &&
+            this.loginForm.get('username').dirty) 
+        "
+      >
+        Username is required
+      </p>
+    </div>
+    <div class="input">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" />
+      <p
+        class="wrong"
+        *ngIf="
+          (this.loginForm.get('password').value === '' &&
+            this.loginForm.get('password').dirty) 
+        "
+      >
+        Username is required
+      </p>
+    </div>
+  </div>
+  <div class="btn_block">
+    <button class="btn submit" (click)="submit()">GO!</button>
+  </div>
+</form>

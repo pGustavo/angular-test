@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <th>Tasks {{ label }}</th>
+    <th>Check</th>
+  </thead>
+  <tbody *ngIf="data.length > 0">
+    <tr *ngFor="let t of data">
+      <td>
+        #{{ t.id }} {{ t.name }} -
+        <span [ngClass]="{ done: t.done, todo: !t.done }">
+          {{ t.done ? 'Done' : 'TODO' }}</span
+        >
+      </td>
+      <td>
+        <input type="checkbox" [checked]="t.done" (change)="done(t)" />
+      </td>
+      <td><button (click)="remove(data, t)">Remove</button></td>
+    </tr>
+  </tbody>
+  <p *ngIf="data.length === 0">No Tasks to display</p>
+</table>

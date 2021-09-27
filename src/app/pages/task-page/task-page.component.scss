@@ -1,0 +1,49 @@
+.done {
+  color: green;
+}
+.todo {
+  color: tomato;
+}
+.list {
+  display: flex;
+ 
+}
+.task-main {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0px;
+}
+.input_group {
+  display: flex;
+  flex-flow: column nowrap;
+  h3 {
+    margin: 35px 0 4px 12px;
+  }
+  input{
+    border-radius: 90px;
+    border: 1px solid;
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+  }
+  button {
+    border-radius: 100px;
+    width: 135px;
+    height: 35px;
+    border: 1px solid;
+    margin-left: 10px;
+    background-color: turquoise;
+    transition: background-color 500ms;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: turquoise;
+      border: 1px solid turquoise;
+      cursor: pointer;
+    }
+  }
+  .add-contorl {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,48 @@
+.welcome {
+  text-align: center;
+  padding: 60px;
+  font-size: 4rem;
+}
+.input {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 15rem;
+  margin: 50px;
+  input{
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+    .wrong {
+      border: 1px solid tomato;
+    }
+  }
+}
+.input_group {
+  display: flex;
+  justify-content: center;
+}
+.wrong {
+  color: tomato;
+}
+
+.btn {
+border-radius: 10px;
+border: 1px solid; 
+&.submit {
+  background-color: turquoise;
+  width: 600px;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+  &:hover {
+    border: 1px solid turquoise;
+    background-color: white;
+    color: turquoise;
+    cursor: pointer;
+  }
+}
+}
+.btn_block {
+  display: flex;
+  justify-content: center;
+}
